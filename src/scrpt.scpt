@@ -1,6 +1,6 @@
 # PART 1
 # Create select dropdown of window sizes and capture user selection
-set windowSizeOptions to {"2512x1413", "1920x1080", "1600x900", "1280x720"}
+set windowSizeOptions to {"2512x1413", "1920x1080", "1600x900", "1280x720", "992x558"}
 set selectedSizeOption to choose from list windowSizeOptions with prompt "Select your favorite fruit:" default items {"2512x1413"}
 
 set the text item delimiters to "x"
