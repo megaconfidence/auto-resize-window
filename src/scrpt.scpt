@@ -1,7 +1,7 @@
 # PART 1
 # Create select dropdown of window sizes and capture user selection
-set windowSizeOptions to {"2516x1415", "1920x1080"}
-set selectedSizeOption to choose from list windowSizeOptions with prompt "Select your favorite fruit:" default items {"2516x1415"}
+set windowSizeOptions to {"2512x1413", "1920x1080", "1600x900", "1280x720"}
+set selectedSizeOption to choose from list windowSizeOptions with prompt "Select your favorite fruit:" default items {"2512x1413"}
 
 set the text item delimiters to "x"
 set {appWidth, appHeight} to {text item 1, text item 2} of item 1 of the selectedSizeOption

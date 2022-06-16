@@ -17,5 +17,9 @@ You will need to give this application access to `System Events` and `Finder` on
 
 You can take a look at the source script [here](src/scrpt.scpt) to be sure.
 
-![Permission one](src/images/System%20Events.png)
-![Permission two](src/images/Finder.png)
+| | |
+|:-------------------------:|:-------------------------:|
+|![Permission one](src/images/System%20Events.png)|![Permission two](src/images/Finder.png)|
+
+## Known Issues
+* The app currently can't resize `Electron` based apps i.e VScode
