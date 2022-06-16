@@ -1,9 +1,9 @@
 # Auto Resize Window
 > This only works on Mac OS
 
-This is an AppleScrip app that automatically resizes the active window to various 16:9 aspect ratios. This is useful for automatically resizing an app window before a screencast or screen share.
+This is an AppleScript app that automatically resizes the active window to various 16:9 aspect ratios. This is useful for automatically resizing an app window before a screencast or screen share.
 
-This was written in AppleScrip and only works on Mac OS. The supported window sizes are:
+This was written in AppleScript and only works on Mac OS. The supported window sizes are:
 * 2512x1413 
 * 1920x1080 
 * 1600x900 
