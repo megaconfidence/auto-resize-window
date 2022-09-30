@@ -7,11 +7,11 @@ https://user-images.githubusercontent.com/17744578/174408067-a1681e21-26fb-4b8f-
 This is an AppleScript app that automatically resizes the active window to various 16:9 aspect ratios. This is useful for automatically resizing an app window before a screencast or screen share.
 
 This was written in AppleScript and only works on Mac OS. The supported window sizes are:
-* 2512x1413 
-* 1920x1080 
-* 1600x900 
-* 1280x720 
-* 992x558
+* 2560x1440 - QHD
+* 2512x1413 - Custom
+* 1920x1080 - FHD
+* 1600x900 - HD+
+* 1280x720 - HD
 
 ## Usage
 1. Download the app zip file from [here](https://github.com/cokoghenun/auto-resize-window/raw/main/Auto%20Resize%20Window.zip)
