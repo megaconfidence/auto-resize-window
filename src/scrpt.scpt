@@ -1,8 +1,14 @@
 # PART 1
 # Create select dropdown of window sizes and capture user selection
-set windowSizeOptions to {"2560x1440","2512x1413","1920x1080", "1600x900", "1280x720"}
+set windowSizeOptions to {"2560x1440", "2512x1413", "1920x1080", "1600x900", "1366x768", "1280x720"}
 set selectedSizeOption to choose from list windowSizeOptions with prompt "Select window size" default items {"1920x1080"}
 
+# If 'Cancel' button is clicked on, exit program
+if selectedSizeOption is false then
+	error number -128
+end if
+
+# Continue program if a selection is made
 set the text item delimiters to "x"
 set {appWidth, appHeight} to {text item 1, text item 2} of item 1 of the selectedSizeOption
 
@@ -36,3 +42,4 @@ tell application activeApp
 	set xAxis to (screenWidth - appWidth) / 2 as integer
 	set the bounds of the first window to {xAxis, yAxis, appWidth + xAxis, appHeight + yAxis}
 end tell
+
