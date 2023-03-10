@@ -15,7 +15,7 @@ This was written in AppleScript and only works on Mac OS. The supported window s
 * 1280x720 - HD
 
 ## Usage
-1. Download the app zip file from [here](https://github.com/cokoghenun/auto-resize-window/raw/main/downloads/Auto%20Resize%20Window.zip)
+1. Download the app zip file from [here](/raw/main/downloads/Auto%20Resize%20Window.zip)
 1. Extract the app from the zip file
 1. Move the app to your `Applications` folder
 1. Open up Spotlight (`cmd+spacebar`) and type in `Auto Resize Window`
