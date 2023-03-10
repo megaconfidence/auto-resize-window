@@ -6,16 +6,8 @@ https://user-images.githubusercontent.com/17744578/174408067-a1681e21-26fb-4b8f-
 
 This is an AppleScript app that automatically resizes the active window to various 16:9 aspect ratios. This is useful for automatically resizing an app window before a screencast or screen share.
 
-This was written in AppleScript and only works on Mac OS. The supported window sizes are:
-* 2560x1440 - QHD
-* 2512x1413 - Custom
-* 1920x1080 - FHD
-* 1600x900 - HD+
-* 1366x768 - WXGA
-* 1280x720 - HD
-
 ## Usage
-1. Download the app zip file from [here](/raw/main/downloads/Auto%20Resize%20Window.zip)
+1. Download the app zip file [here](https://github.com/megaconfidence/auto-resize-window/raw/main/downloads/Auto%20Resize%20Window.zip)
 1. Extract the app from the zip file
 1. Move the app to your `Applications` folder
 1. Open up Spotlight (`cmd+spacebar`) and type in `Auto Resize Window`
@@ -23,9 +15,9 @@ This was written in AppleScript and only works on Mac OS. The supported window s
 1. Select a resolution and profit
 
 ## Important ⚠️
-You will need to give this application access to `System Events` and `Finder` on the first run.
+You will need to give this application access to `System Events` and `Finder` on the first run. On macOs Ventura (13.1) and higher, go to `System Settings` > `Privacy & Security` > `Security` then allow *Auto Resize Window* to run
 
-You can take a look at the source script [here](src/scrpt.scpt) to be sure.
+You can always take a look at the source code [here](src/scrpt.scpt) to be sure this program is not malicious.
 
 | | |
 |:-------------------------:|:-------------------------:|
