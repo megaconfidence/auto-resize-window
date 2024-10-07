@@ -22,6 +22,3 @@ You can always take a look at the source code [here](src/scrpt.scpt) to be sure 
 | | |
 |:-------------------------:|:-------------------------:|
 |![Permission one](src/images/System%20Events.png)|![Permission two](src/images/Finder.png)|
-
-## Known Issues
-* The app currently can't resize `Electron` based apps i.e VScode
