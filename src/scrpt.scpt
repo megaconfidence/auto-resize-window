@@ -1,3 +1,4 @@
+
 # PART 1
 # Create select dropdown of window sizes and capture user selection
 set windowSizeOptions to {"2560x1440", "2512x1413", "1920x1080", "1600x900", "1366x768", "1280x720"}
@@ -8,11 +9,20 @@ if selectedSizeOption is false then
 	error number -128
 end if
 
-# Continue program if a selection is made
+# PART 2
+# Calculate the resize dimentions
 set the text item delimiters to "x"
 set {appWidth, appHeight} to {text item 1, text item 2} of item 1 of the selectedSizeOption
 
-# PART 2
+tell application "Finder"
+	set screenResolution to bounds of window of desktop
+end tell
+set {screenWidth, screenHeight} to {item 3, item 4} of screenResolution
+
+set yAxis to (screenHeight - appHeight) / 2 as integer
+set xAxis to (screenWidth - appWidth) / 2 as integer
+
+# PART 3
 # Get active window while ignoring the resize window app
 tell application "System Events"
 	set frontmostProcess to first process where it is frontmost
@@ -23,23 +33,16 @@ tell application "System Events"
 	set secondFrontmostProcess to name of first process where it is frontmost
 	set frontmost of frontmostProcess to true
 end tell
-
 set activeApp to secondFrontmostProcess
 
-# PART 3
-# Resize Current Active Window
-tell application "Finder"
-	set screenResolution to bounds of window of desktop
+# PART 4
+# Pefrom the app resize
+tell application "System Events"
+	tell application process activeApp
+		activate
+		reopen
+		set frontWindow to the first window
+		set position of frontWindow to {xAxis, yAxis}
+		set size of frontWindow to {appWidth, appHeight}
+	end tell
 end tell
-
-set screenWidth to item 3 of screenResolution
-set screenHeight to item 4 of screenResolution
-
-tell application activeApp
-	activate
-	reopen
-	set yAxis to (screenHeight - appHeight) / 2 as integer
-	set xAxis to (screenWidth - appWidth) / 2 as integer
-	set the bounds of the first window to {xAxis, yAxis, appWidth + xAxis, appHeight + yAxis}
-end tell
-
