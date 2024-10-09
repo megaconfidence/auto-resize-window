@@ -1,8 +1,8 @@
 
 # PART 1
 # Create select dropdown of window sizes and capture user selection
-set windowSizeOptions to {"2560x1440", "2512x1413", "1920x1080", "1600x900", "1366x768", "1280x720"}
-set selectedSizeOption to choose from list windowSizeOptions with prompt "Select window size" default items {"1920x1080"}
+set windowSizeOptions to {"1920x1080", "1600x900", "1366x768", "1280x720"}
+set selectedSizeOption to choose from list windowSizeOptions with prompt "Select window size" default items {"1280x720"}
 
 # If 'Cancel' button is clicked on, exit program
 if selectedSizeOption is false then
@@ -37,6 +37,15 @@ set activeApp to secondFrontmostProcess
 
 # PART 4
 # Pefrom the app resize
+tell application activeApp
+	activate
+	reopen
+	set the bounds of the first window to {xAxis, yAxis, appWidth + xAxis, appHeight + yAxis}
+end tell
+(*
+# Using system events
+# Leads to error, where app doesn't have the right permission
+# even though it's already given
 tell application "System Events"
 	tell application process activeApp
 		activate
@@ -46,3 +55,4 @@ tell application "System Events"
 		set size of frontWindow to {appWidth, appHeight}
 	end tell
 end tell
+*)
